@@ -1,4 +1,5 @@
 # Getting Started with Create React App
+To play the quiz - https://sathtikbose.github.io/reactQuiz/
 
 This project was bootstrapped with [Create React App](https://github.com/facebook/create-react-app).
 
