@@ -23,6 +23,7 @@ const initialState = {
   points: 0,
   highscore: 0,
   secondsRemaining: 10,
+  totalpoints: null,
 };
 
 function reducer(state, action) {
@@ -87,7 +88,17 @@ export default function App() {
   ] = useReducer(reducer, initialState);
 
   const numQuestions = questions.length;
-  const maxPossiblePoints = 280;
+  let sum = 0;
+
+  if (questions !== null) {
+    questions.forEach(myFunction);
+    function myFunction(value) {
+      sum = sum + value.points;
+    }
+    console.log(sum);
+  }
+
+  const maxPossiblePoints = sum;
 
   useEffect(function () {
     fetch("https://mocki.io/v1/c4f7fad3-bc36-461a-a825-2544ae572e25")
